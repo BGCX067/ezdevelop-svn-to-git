@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="EZDev.Data.Popedom" assembly="EZDev.Data">
+
+  <class name="RoleModule" table="Sys_RoleModule" optimistic-lock="version">
+    <id name="ID" type="System.Guid">
+      <column name="ID" default="NewID()" />
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Ticks" />
+    <property name="Value">
+      <column name="Value" sql-type="nvarchar(max)" default="''" />
+    </property>
+
+    <many-to-one name="Role" class="Role" column="RoleID" foreign-key="FK_RoleModule_Role" not-null="true" />
+    <many-to-one name="Module" class="Module" column="ModuleID" foreign-key="FK_RoleModule_Module" not-null="true" />
+  </class>
+</hibernate-mapping>

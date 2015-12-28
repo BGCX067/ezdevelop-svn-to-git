@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="EZDev.Data.Popedom" assembly="EZDev.Data">
+
+  <class name="Power" table="Sys_Power" optimistic-lock="version">
+    <id name="ID" column="ID" type="System.Guid">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Ticks" />
+    <property name="Name" column="Name" not-null="true" length="30" />
+    <property name="Type" not-null="false">
+      <column name="Type" sql-type="nvarchar(max)" not-null="true" />
+    </property>
+    <property name="Remark" column="Remark" not-null="false" length="255"/>
+
+  </class>
+</hibernate-mapping>

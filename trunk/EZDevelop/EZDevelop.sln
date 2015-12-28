@@ -1,0 +1,79 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZDev", "EZDev\EZDev.csproj", "{0C579902-9371-4724-B793-2C28E914D40E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZDev.Data", "EZDev.Data\EZDev.Data.csproj", "{5EC8A1C5-AE00-4B0C-A519-78DCE7867627}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZDev.External", "EZDev.External\EZDev.External.csproj", "{57353C89-69FF-4E17-AB1E-EE6E66B85191}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EZDev.Service", "EZDev.Services\EZDev.Service.csproj", "{BFE71A4B-8D5D-4000-BF0E-F16979A6C05B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject1", "TestProject1\TestProject1.csproj", "{1DC51E16-5110-44D0-9873-6E01AF10F376}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{405FAD26-94CA-4990-9A48-5444CAAE8877}"
+	ProjectSection(SolutionItems) = preProject
+		EZDevelop.vsmdi = EZDevelop.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://server:9080/tfs/studycollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = EZDev.Data\\EZDev.Data.csproj
+		SccProjectName1 = EZDev.Data
+		SccLocalPath1 = EZDev.Data
+		SccProjectUniqueName2 = EZDev.External\\EZDev.External.csproj
+		SccProjectName2 = EZDev.External
+		SccLocalPath2 = EZDev.External
+		SccProjectUniqueName3 = EZDev.Services\\EZDev.Service.csproj
+		SccProjectName3 = EZDev.Services
+		SccLocalPath3 = EZDev.Services
+		SccProjectUniqueName4 = EZDev\\EZDev.csproj
+		SccProjectName4 = EZDev
+		SccLocalPath4 = EZDev
+		SccProjectUniqueName5 = TestProject1\\TestProject1.csproj
+		SccProjectName5 = TestProject1
+		SccLocalPath5 = TestProject1
+	EndGlobalSection
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = EZDevelop.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0C579902-9371-4724-B793-2C28E914D40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C579902-9371-4724-B793-2C28E914D40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C579902-9371-4724-B793-2C28E914D40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C579902-9371-4724-B793-2C28E914D40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EC8A1C5-AE00-4B0C-A519-78DCE7867627}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EC8A1C5-AE00-4B0C-A519-78DCE7867627}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EC8A1C5-AE00-4B0C-A519-78DCE7867627}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EC8A1C5-AE00-4B0C-A519-78DCE7867627}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57353C89-69FF-4E17-AB1E-EE6E66B85191}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57353C89-69FF-4E17-AB1E-EE6E66B85191}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57353C89-69FF-4E17-AB1E-EE6E66B85191}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57353C89-69FF-4E17-AB1E-EE6E66B85191}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BFE71A4B-8D5D-4000-BF0E-F16979A6C05B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BFE71A4B-8D5D-4000-BF0E-F16979A6C05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BFE71A4B-8D5D-4000-BF0E-F16979A6C05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BFE71A4B-8D5D-4000-BF0E-F16979A6C05B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC51E16-5110-44D0-9873-6E01AF10F376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC51E16-5110-44D0-9873-6E01AF10F376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC51E16-5110-44D0-9873-6E01AF10F376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC51E16-5110-44D0-9873-6E01AF10F376}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SubversionScc) = preSolution
+		Svn-Managed = True
+		Manager = AnkhSVN - Subversion Support for Visual Studio
+	EndGlobalSection
+EndGlobal

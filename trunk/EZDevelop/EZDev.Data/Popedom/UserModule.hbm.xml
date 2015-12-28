@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="EZDev.Data.Popedom" assembly="EZDev.Data">
+
+  <class name="UserModule" table="Sys_UserModule" optimistic-lock="version">
+    <id name="ID" type="System.Guid"  >
+      <column name="ID" default="NewID()" />
+      <generator class="guid.comb" />
+    </id>
+    
+    <version name="Version" column="Version" type="Ticks" />
+
+    <property name="Value">
+      <column name="Value" sql-type="nvarchar(max)" default="''" />
+    </property>
+    <many-to-one name="User" class="User" column="UserID" foreign-key="FK_UserModule_User" not-null="true"/>
+    <many-to-one name="Module" class="Module" column="ModuleID" foreign-key="FK_UserModule_Module" not-null="true" />
+  </class>
+</hibernate-mapping>

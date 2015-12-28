@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="TestData" assembly="TestData">
+  <meta attribute="" inherit="false" />
+  <class name="Employee" table="Employee">
+    <id name="ID" column="ID" type="System.Guid"  >
+      <generator class="guid.comb" />
+    </id>
+    <property name="Name" column="Name" type="System.String" not-null="true" />
+
+    <set name="EMs">
+      <key column="EmpID" />
+      <one-to-many class="EmpMsg"/>
+    </set>
+
+    <set name="Messages" generic="true" cascade="all" table="EmpMsg">
+      <key column="EmpID" />
+      <many-to-many class="Message" column="MsgID" />
+    </set>
+  </class>
+
+  <class name="Message" table="Message">
+    <id name="ID" column="ID" type="System.Guid" >
+      <generator class="guid.comb" />
+    </id>
+    <property name="Content" column="Content" type="System.String" not-null="true" />
+    <!--<set name="Employees" generic="true" table="EmpMsg">
+      <key column="MsgID" />
+      <many-to-many class="Employee" column="EmpID"/>
+    </set>-->
+
+  </class>
+
+  <class name="EmpMsg" table="EmpMsg">
+    <id name="ID" type="System.Guid"  >
+      <column name="ID" default="NewID()" />
+      <generator class="guid.comb" />
+    </id>
+    <!--<composite-id>
+      <key-many-to-one name="Employee" column="EmpID" foreign-key="FK_EmpMsg_Employee" class="Employee" />
+      <key-many-to-one name="Message" column="MsgID" foreign-key="FK_EmpMsg_Message" class="Message" />
+    </composite-id>-->
+    
+    <property name="IsRead" column="IsRead" type="System.Boolean" />
+
+    <many-to-one name="Employee" column="EmpID" class="Employee" foreign-key="FK_EmpMsg_Employee" not-null="true" />
+    <many-to-one name="Message" column="MsgID" class="Message" foreign-key="FK_EmpMsg_Message"  not-null="true"/>
+  </class>
+  
+</hibernate-mapping>

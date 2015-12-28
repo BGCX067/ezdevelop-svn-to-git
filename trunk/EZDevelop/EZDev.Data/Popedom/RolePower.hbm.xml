@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="EZDev.Data.Popedom" assembly="EZDev.Data">
+
+  <class name="RolePower" table="Sys_RolePower" optimistic-lock="version">
+    <id name="ID" type="System.Guid">
+      <column name="ID" default="NewID()" />
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Ticks" />
+    <property name="Value" length="255" not-null="true" />
+
+    <many-to-one name="Role" class="Role" column="RoleID" foreign-key="FK_RolePower_Role" not-null="true" />
+    <many-to-one name="Power" class="Power" column="PowerID" foreign-key="FK_RolePower_Power" not-null="true" />
+  </class>
+</hibernate-mapping>

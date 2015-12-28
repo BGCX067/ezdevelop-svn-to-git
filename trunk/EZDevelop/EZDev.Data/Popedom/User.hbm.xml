@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="EZDev.Data.Popedom" assembly="EZDev.Data">
+  <meta attribute="" inherit="false" />
+  <class name="User" table="Sys_User" optimistic-lock="version">
+    <id name="ID" column="ID" type="System.Guid">
+      <generator class="guid.comb" />
+    </id>
+
+    <natural-id>
+      <property name="LoginName" type="System.String" length="255"/>
+    </natural-id>
+    
+    <version name="Version" column="Version" type="Ticks" />
+    <property name="Name" column="Name" not-null="true" length="30"/>
+    <property name="Birthday" column="Birthday" not-null="false" />
+    <property name="Password" column="Password" not-null ="true" length="255" />
+    <property name="IsLocked" />
+    <property name="Remark" column="Remark" not-null="false" length="255" />
+
+    <many-to-one name="Sex" column="SexCodeID" />
+
+    <set name="Roles" generic="true" table="Sys_UserRole" lazy="true">
+      <key column="UserID" foreign-key="FK_User_Role" />
+      <many-to-many column="RoleID" foreign-key="FK_Role_User" class="Role" />
+    </set>
+
+
+    <set name="Modules" generic="true" cascade="all" table="Sys_UserModule" lazy="true">
+      <key column="UserID" foreign-key="FK_User_Module" />
+      <many-to-many column="ModuleID" foreign-key="FK_Module_User" class="Module" />
+    </set>
+
+
+    <set name="UserModules" lazy="true" generic="true">
+      <key column="UserID" />
+      <one-to-many class="UserModule" />
+    </set>
+
+    <set name="Powers" generic="true" cascade="all" table="Sys_UserPower" lazy="true">
+      <key column="UserID" foreign-key="FK_User_Power" />
+      <many-to-many column="PowerID" foreign-key="FK_Power_User" class="Power" />
+    </set>
+
+
+    <set name="UserPowers" lazy="true" generic="true">
+      <key column="UserID" />
+      <one-to-many class="UserPower" />
+    </set>
+
+  </class>
+</hibernate-mapping>
